@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { MonitorComponent } from './monitor.component';
 
 import { MonitorRoutingModule } from './monitor-routing.module';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 @NgModule({
     declarations: [MonitorComponent],
     exports: [MonitorComponent],
     imports: [
-        BrowserModule,
-        MonitorRoutingModule
+        CommonModule,
+        MonitorRoutingModule,
+        NzInputModule
     ]
 })
 

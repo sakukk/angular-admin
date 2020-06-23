@@ -8,6 +8,7 @@ import { Todo } from '../../model/todo.model';
     selector: 'app-monitor',
     template: `
         <span (click)="handleClick()">monitor</span>
+        <input nz-input placeholder="Basic usage"/>
         <ul>
             <li *ngFor="let todo of todos">{{todo.desc}}</li>
         </ul>
