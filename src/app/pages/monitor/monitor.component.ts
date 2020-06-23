@@ -8,7 +8,7 @@ import { Todo } from '../../model/todo.model';
     selector: 'app-monitor',
     template: `
         <span (click)="handleClick()">monitor</span>
-        <input nz-input placeholder="Basic usage" [(ngModel)]="desc" (keyup.enter)=addTodo/>
+        <input nz-input placeholder="Basic usage" [(ngModel)]="desc" (keyup.enter)="addTodo()"/>
         <ul>
             <li *ngFor="let todo of todos">{{todo.desc}}</li>
         </ul>
@@ -34,5 +34,8 @@ export class MonitorComponent implements OnInit {
         this.userService.test();
     }
 
-
+    addTodo () {
+        this.todos = this.todoService.addTodo(this.desc);
+        this.desc = '';
+    }
 };
