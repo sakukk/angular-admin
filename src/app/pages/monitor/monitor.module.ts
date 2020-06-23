@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MonitorComponent } from './monitor.component';
 
 import { MonitorRoutingModule } from './monitor-routing.module';
@@ -11,6 +12,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     imports: [
         CommonModule,
         MonitorRoutingModule,
+        FormsModule,
         NzInputModule
     ]
 })
