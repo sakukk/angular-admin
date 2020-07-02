@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "antd-angular"
+  "defaultProject": "antd-angular",
+  "cli": {
+    "analytics": false
+  }
 }
