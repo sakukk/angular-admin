@@ -9,17 +9,25 @@ import * as maptalks from 'maptalks';
 })
 export class WorkSpaceComponent implements OnInit {
   map: any = ''
+  worker: Worker = null
   constructor() {
+  }
+
+  ngOnDestroy(): void {
+    console.log('destroy');
+    if (this.worker) {
+      this.worker.terminate();
+    }
   }
 
   ngOnInit(): void {
     if (typeof Worker !== 'undefined') {
       // Create a new
-      const worker = new Worker('./workspace.worker', { type: 'module' });
-      worker.onmessage = ({ data }) => {
+      this.worker = new Worker('./workspace.worker', { type: 'module' });
+      this.worker.onmessage = ({ data }) => {
         console.log(`page got message: ${data}`);
       };
-      worker.postMessage('hello');
+      this.worker.postMessage('hello');
     } else {
       // Web Workers are not supported in this environment.
       // You should add a fallback so that your program still executes correctly.
