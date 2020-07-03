@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import * as maptalks from 'maptalks';
 
@@ -7,9 +7,10 @@ import * as maptalks from 'maptalks';
   templateUrl: './workspace.component.html',
   styleUrls: []
 })
-export class WorkSpaceComponent implements OnInit {
+export class WorkSpaceComponent implements OnInit, AfterViewInit {
   map: any = ''
   worker: Worker = null
+
   constructor() {
   }
 
@@ -18,6 +19,9 @@ export class WorkSpaceComponent implements OnInit {
     if (this.worker) {
       this.worker.terminate();
     }
+  }
+
+  ngAfterViewInit(): void {
   }
 
   ngOnInit(): void {
