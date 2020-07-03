@@ -21,6 +21,7 @@
     "@angular/router": "~9.1.11",
     "angular2-uuid": "^1.1.1",
     "maptalks": "^0.47.5",
+    "mxgraph": "^4.2.0",
     "ng-zorro-antd": "^9.2.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

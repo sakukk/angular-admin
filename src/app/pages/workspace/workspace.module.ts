@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { WorkSpaceComponent } from './workspace.component';
 import { WorkspaceRoutingModule } from './workspace-routing.module';
-import {NzButtonModule} from 'ng-zorro-antd/button'
+import { NzButtonModule } from 'ng-zorro-antd/button'
 
 @NgModule({
   declarations: [WorkSpaceComponent],
